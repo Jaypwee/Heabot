@@ -21,52 +21,71 @@
     },
     {"tag": "options",
      "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-     "responses": ["I can guide you through Covid-19 datas, symptom, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+     "responses": ["I can guide you through Covid-19 datas, symptom"],
      "context": [""]
     },
-    {"tag": "adverse_drug",
-     "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-     "responses": ["Navigating to Adverse drug reaction module"],
+    {"tag": "covid_symptoms",
+     "patterns": ["What are the symptoms of covid", "Symptoms of covid", "Symptoms of coronavirus", "How do I know I have covid"],
+     "responses": ["People with COVID-19 have had a wide range of symptoms reported – ranging from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Anyone can have mild to severe symptoms. People with these symptoms may have COVID-19:\n\n    Fever or chills\n    Cough\n    Shortness of breath or difficulty breathing\n    Fatigue\n    Muscle or body aches\n    Headache\n    New loss of taste or smell\n    Sore throat\n    Congestion or runny nose\n    Nausea or vomiting\n    Diarrhea"],
      "context": [""]
     },
-    {"tag": "blood_pressure",
-     "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-     "responses": ["Navigating to Blood Pressure module"],
+    {"tag": "covid_symptoms_todo",
+     "patterns": ["What should I do", "I think I have covid", "I have covid", "I have coronavirus", "When should I go to the hospital", "Do I need to go to the doctor"],
+     "responses": ["When to Seek Emergency Medical Attention\n\nLook for emergency warning signs* for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately:\n\n    Trouble breathing\n    Persistent pain or pressure in the chest\n    New confusion\n    Inability to wake or stay awake\n    Pale, gray, or blue-colored skin, lips, or nail beds, depending on skin tone\n\n*This list is not all possible symptoms. Please call your medical provider for any other symptoms that are severe or concerning to you.\n\nCall 911 or call ahead to your local emergency facility: Notify the operator that you are seeking care for someone who has or may have COVID-19."],
      "context": [""]
     },
-    {"tag": "blood_pressure_search",
-     "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-     "responses": ["Please provide Patient ID", "Patient ID?"],
-     "context": ["search_blood_pressure_by_patient_id"]
+    {"tag": "covid_vaccines",
+     "patterns": ["Types of vaccines", "covid vaccines", "What vaccines are there", "Tell me all the vaccines"],
+     "responses": ["Pfizer-BioNTech [ 1 ]\nAges Recommended\n5+ years old\n\nPrimary Series\n2 doses\nGiven 3 weeks (21 days) apart [ 2 ]\n\n\nBooster Dose\nEveryone ages 18 years and older is eligible at least 6 months after the last dose in their primary series. Any of the three COVID-19 vaccines can be used for the booster dose.\nWhen Fully Vaccinated\n2 weeks after 2nd dose\n\nModerna [ 1 ]\nAges Recommended\n18+ years old\n\nPrimary Series\n2 doses\nGiven 4 weeks (28 days) apart [ 2 ]\n\n\nBooster Dose\nEveryone ages 18 years and older is eligible at least 6 months after the last dose in their primary series. Any of the three COVID-19 vaccines can be used for the booster dose.\nWhen Fully Vaccinated\n2 weeks after 2nd dose\n\nJohnson & Johnson’s Janssen [ 1 ]\nAges Recommended\n18+ years oldPrimary Series\n1 dose\nBooster Dose\nAt least 2 months after the first dose for all people ages 18 years and older. Any of the three COVID-19 vaccines can be used for the booster dose.\nWhen Fully Vaccinated\n2 weeks after 1st dose"],
+     "context": [""]
     },
-    {"tag": "search_blood_pressure_by_patient_id",
+    {"tag": "covid_vaccines_location",
+     "patterns": ["Where do I get vaccinated", "US Vaccination location", "How do I get vaccinated"],
+     "responses": ["Please visit vaccines.gov for more info."],
+     "context": [""]
+    },
+    {"tag": "covid_vaccine_eligibility",
+     "patterns": ["Am I eligible for vaccine", "Eligibility for vaccine", "Can I get vaccinated"],
+     "responses": ["Everyone 5 years of age and older is now eligible to get a COVID-19 vaccination."],
+     "context": [""]
+    },
+    {"tag": "covid_booster_eligibility",
+     "patterns": ["Am I eligible for booster", "Eligibility for booster", "Should I get Booster"],
+     "responses": ["Everyone ages 18 and older should get a booster shot."],
+     "context": [""]
+    },
+    {"tag": "covid_case",
+     "patterns": ["Daily covid cases", "Show me total new case for US", "Covid Cases in US"],
+     "responses": ["https://https://api.covidactnow.org/v2/country/US.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"],
+     "context": [""]
+    },
+    {"tag": "covid_cases_AK", "patterns": ["New cases in Alaska", "Show me covid cases in Alaska", "Covid data in Alaska"], "responses": ["https://api.covidactnow.org/v2/state/AK.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_AL", "patterns": ["New cases in Alabama", "Show me covid cases in Alabama", "Covid data in Alabama"], "responses": ["https://api.covidactnow.org/v2/state/AL.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_AR", "patterns": ["New cases in Arkansas", "Show me covid cases in Arkansas", "Covid data in Arkansas"], "responses": ["https://api.covidactnow.org/v2/state/AR.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_AS", "patterns": ["New cases in American Samoa", "Show me covid cases in American Samoa", "Covid data in American Samoa"], "responses": ["https://api.covidactnow.org/v2/state/AS.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_AZ", "patterns": ["New cases in Arizona", "Show me covid cases in Arizona", "Covid data in Arizona"], "responses": ["https://api.covidactnow.org/v2/state/AZ.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_CA", "patterns": ["New cases in California", "Show me covid cases in California", "Covid data in California"], "responses": ["https://api.covidactnow.org/v2/state/CA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_CO", "patterns": ["New cases in Colorado", "Show me covid cases in Colorado", "Covid data in Colorado"], "responses": ["https://api.covidactnow.org/v2/state/CO.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_CT", "patterns": ["New cases in Connecticut", "Show me covid cases in Connecticut", "Covid data in Connecticut"], "responses": ["https://api.covidactnow.org/v2/state/CT.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_DC", "patterns": ["New cases in District of Columbia", "Show me covid cases in District of Columbia", "Covid data in District of Columbia"], "responses": ["https://api.covidactnow.org/v2/state/DC.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_DE", "patterns": ["New cases in Delaware", "Show me covid cases in Delaware", "Covid data in Delaware"], "responses": ["https://api.covidactnow.org/v2/state/DE.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_FL", "patterns": ["New cases in Florida", "Show me covid cases in Florida", "Covid data in Florida"], "responses": ["https://api.covidactnow.org/v2/state/FL.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_GA", "patterns": ["New cases in Georgia", "Show me covid cases in Georgia", "Covid data in Georgia"], "responses": ["https://api.covidactnow.org/v2/state/GA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_GU", "patterns": ["New cases in Guam", "Show me covid cases in Guam", "Covid data in Guam"], "responses": ["https://api.covidactnow.org/v2/state/GU.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_HI", "patterns": ["New cases in Hawaii", "Show me covid cases in Hawaii", "Covid data in Hawaii"], "responses": ["https://api.covidactnow.org/v2/state/HI.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_IA", "patterns": ["New cases in Iowa", "Show me covid cases in Iowa", "Covid data in Iowa"], "responses": ["https://api.covidactnow.org/v2/state/IA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_ID", "patterns": ["New cases in Idaho", "Show me covid cases in Idaho", "Covid data in Idaho"], "responses": ["https://api.covidactnow.org/v2/state/ID.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_IL", "patterns": ["New cases in Illinois", "Show me covid cases in Illinois", "Covid data in Illinois"], "responses": ["https://api.covidactnow.org/v2/state/IL.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_IN", "patterns": ["New cases in Indiana", "Show me covid cases in Indiana", "Covid data in Indiana"], "responses": ["https://api.covidactnow.org/v2/state/IN.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_KS", "patterns": ["New cases in Kansas", "Show me covid cases in Kansas", "Covid data in Kansas"], "responses": ["https://api.covidactnow.org/v2/state/KS.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_KY", "patterns": ["New cases in Kentucky", "Show me covid cases in Kentucky", "Covid data in Kentucky"], "responses": ["https://api.covidactnow.org/v2/state/KY.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_LA", "patterns": ["New cases in Louisiana", "Show me covid cases in Louisiana", "Covid data in Louisiana"], "responses": ["https://api.covidactnow.org/v2/state/LA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MA", "patterns": ["New cases in Massachusetts", "Show me covid cases in Massachusetts", "Covid data in Massachusetts"], "responses": ["https://api.covidactnow.org/v2/state/MA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MD", "patterns": ["New cases in Maryland", "Show me covid cases in Maryland", "Covid data in Maryland"], "responses": ["https://api.covidactnow.org/v2/state/MD.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_ME", "patterns": ["New cases in Maine", "Show me covid cases in Maine", "Covid data in Maine"], "responses": ["https://api.covidactnow.org/v2/state/ME.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MI", "patterns": ["New cases in Michigan", "Show me covid cases in Michigan", "Covid data in Michigan"], "responses": ["https://api.covidactnow.org/v2/state/MI.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MN", "patterns": ["New cases in Minnesota", "Show me covid cases in Minnesota", "Covid data in Minnesota"], "responses": ["https://api.covidactnow.org/v2/state/MN.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MO", "patterns": ["New cases in Missouri", "Show me covid cases in Missouri", "Covid data in Missouri"], "responses": ["https://api.covidactnow.org/v2/state/MO.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MS", "patterns": ["New cases in Mississippi", "Show me covid cases in Mississippi", "Covid data in Mississippi"], "responses": ["https://api.covidactnow.org/v2/state/MS.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_MT", "patterns": ["New cases in Montana", "Show me covid cases in Montana", "Covid data in Montana"], "responses": ["https://api.covidactnow.org/v2/state/MT.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NC", "patterns": ["New cases in North Carolina", "Show me covid cases in North Carolina", "Covid data in North Carolina"], "responses": ["https://api.covidactnow.org/v2/state/NC.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_ND", "patterns": ["New cases in  North Dakota", "Show me covid cases in  North Dakota", "Covid data in  North Dakota"], "responses": ["https://api.covidactnow.org/v2/state/ND.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NE", "patterns": ["New cases in Nebraska", "Show me covid cases in Nebraska", "Covid data in Nebraska"], "responses": ["https://api.covidactnow.org/v2/state/NE.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NH", "patterns": ["New cases in New Hampshire", "Show me covid cases in New Hampshire", "Covid data in New Hampshire"], "responses": ["https://api.covidactnow.org/v2/state/NH.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NJ", "patterns": ["New cases in New Jersey", "Show me covid cases in New Jersey", "Covid data in New Jersey"], "responses": ["https://api.covidactnow.org/v2/state/NJ.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NM", "patterns": ["New cases in New Mexico", "Show me covid cases in New Mexico", "Covid data in New Mexico"], "responses": ["https://api.covidactnow.org/v2/state/NM.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NV", "patterns": ["New cases in Nevada", "Show me covid cases in Nevada", "Covid data in Nevada"], "responses": ["https://api.covidactnow.org/v2/state/NV.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_NY", "patterns": ["New cases in New York", "Show me covid cases in New York", "Covid data in New York"], "responses": ["https://api.covidactnow.org/v2/state/NY.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_OH", "patterns": ["New cases in Ohio", "Show me covid cases in Ohio", "Covid data in Ohio"], "responses": ["https://api.covidactnow.org/v2/state/OH.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_OK", "patterns": ["New cases in Oklahoma", "Show me covid cases in Oklahoma", "Covid data in Oklahoma"], "responses": ["https://api.covidactnow.org/v2/state/OK.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_OR", "patterns": ["New cases in Oregon", "Show me covid cases in Oregon", "Covid data in Oregon"], "responses": ["https://api.covidactnow.org/v2/state/OR.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_PA", "patterns": ["New cases in Pennsylvania", "Show me covid cases in Pennsylvania", "Covid data in Pennsylvania"], "responses": ["https://api.covidactnow.org/v2/state/PA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_PR", "patterns": ["New cases in Puerto Rico", "Show me covid cases in Puerto Rico", "Covid data in Puerto Rico"], "responses": ["https://api.covidactnow.org/v2/state/PR.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_RI", "patterns": ["New cases in Rhode Island", "Show me covid cases in Rhode Island", "Covid data in Rhode Island"], "responses": ["https://api.covidactnow.org/v2/state/RI.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_SC", "patterns": ["New cases in South Carolina", "Show me covid cases in South Carolina", "Covid data in South Carolina"], "responses": ["https://api.covidactnow.org/v2/state/SC.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_SD", "patterns": ["New cases in South Dakota", "Show me covid cases in South Dakota", "Covid data in South Dakota"], "responses": ["https://api.covidactnow.org/v2/state/SD.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_TN", "patterns": ["New cases in Tennessee", "Show me covid cases in Tennessee", "Covid data in Tennessee"], "responses": ["https://api.covidactnow.org/v2/state/TN.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_TX", "patterns": ["New cases in Texas", "Show me covid cases in Texas", "Covid data in Texas"], "responses": ["https://api.covidactnow.org/v2/state/TX.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_UT", "patterns": ["New cases in Utah", "Show me covid cases in Utah", "Covid data in Utah"], "responses": ["https://api.covidactnow.org/v2/state/UT.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_VA", "patterns": ["New cases in Virginia", "Show me covid cases in Virginia", "Covid data in Virginia"], "responses": ["https://api.covidactnow.org/v2/state/VA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_VI", "patterns": ["New cases in Virgin Islands", "Show me covid cases in Virgin Islands", "Covid data in Virgin Islands"], "responses": ["https://api.covidactnow.org/v2/state/VI.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_VT", "patterns": ["New cases in Vermont", "Show me covid cases in Vermont", "Covid data in Vermont"], "responses": ["https://api.covidactnow.org/v2/state/VT.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_WA", "patterns": ["New cases in Washington", "Show me covid cases in Washington", "Covid data in Washington"], "responses": ["https://api.covidactnow.org/v2/state/WA.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_WI", "patterns": ["New cases in Wisconsin", "Show me covid cases in Wisconsin", "Covid data in Wisconsin"], "responses": ["https://api.covidactnow.org/v2/state/WI.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_WV", "patterns": ["New cases in West Virginia", "Show me covid cases in West Virginia", "Covid data in West Virginia"], "responses": ["https://api.covidactnow.org/v2/state/WV.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]}, {"tag": "covid_cases_WY", "patterns": ["New cases in Wyoming", "Show me covid cases in Wyoming", "Covid data in Wyoming"], "responses": ["https://api.covidactnow.org/v2/state/WY.json?apiKey=b92ebadc830c4cc5a4cf1ff6c26cb222"]},
+    {"tag": "test",
      "patterns": [],
-     "responses": ["Loading Blood pressure result for Patient"],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },{"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },{"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
      "context": [""]
     },
-    {"tag": "pharmacy_search",
-     "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-     "responses": ["Please provide pharmacy name"],
-     "context": ["search_pharmacy_by_name"]
-    },
-    {"tag": "search_pharmacy_by_name",
+    {"tag": "noanswer",
      "patterns": [],
-     "responses": ["Loading pharmacy details"],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
      "context": [""]
     },
-    {"tag": "hospital_search",
-     "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-     "responses": ["Please provide hospital name or location"],
-     "context": ["search_hospital_by_params"]
-    },
-    {"tag": "search_hospital_by_params",
+    {"tag": "noanswer",
      "patterns": [],
-     "responses": ["Please provide hospital type"],
-     "context": ["search_hospital_by_type"]
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
     },
-    {"tag": "search_hospital_by_type",
+    {"tag": "noanswer",
      "patterns": [],
-     "responses": ["Loading hospital details"],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
      "context": [""]
     }
 ]

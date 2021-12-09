@@ -36,7 +36,7 @@ def predict_class(sentence, model):
     p = bow(sentence, words,show_details=False)
     res = model.predict(np.array([p]))[0]
     # Tentative Threshhold
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.5
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
 
     # sort by strength of probability
@@ -44,6 +44,8 @@ def predict_class(sentence, model):
     return_list = []
     for r in results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+    if not results:
+        return [{"intent": "noanswer"}]
     return return_list
 
 def getResponse(ints, intents_json):
